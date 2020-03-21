@@ -30,7 +30,7 @@ class Student
   def save
     sql = "INSERT INTO students (name, grade) VALUES (@name, @grade)"
     @id = DB[:conn].execute(sql)
-    @id 
+@id     
     binding.pry
     puts ""
   end
