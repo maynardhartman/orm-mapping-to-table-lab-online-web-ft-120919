@@ -29,8 +29,8 @@ class Student
   
   def save
     sql = "INSERT INTO students (name, grade) VALUES (@name, @grade)"
-    result = DB[:conn].execute(sql)
-    @id = result
+    @id = DB[:conn].execute(sql)
+    @id 
     binding.pry
     puts ""
   end
