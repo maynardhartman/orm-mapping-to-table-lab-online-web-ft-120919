@@ -27,7 +27,10 @@ class Student
     DB[:conn].execute(sql)
   end
   
-  def save
+  def save({new_hash})
+    
+    student = self.new(name, hash)
+    binding.pry
     sql = "INSERT INTO students (name, grade) VALUES (@name, @grade)"
     @id = DB[:conn].execute(sql)
     binding.pry
