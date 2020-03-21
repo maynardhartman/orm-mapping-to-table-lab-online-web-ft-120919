@@ -31,7 +31,7 @@ class Student
     
     student = self.new(name, hash)
     binding.pry
-    sql = "INSERT INTO students (name, grade) VALUES (@name, @grade)"
+    sql = "INSERT INTO students (name, grade) VALUES ({name => , @grade)"
     @id = DB[:conn].execute(sql)
     binding.pry
     puts ""
